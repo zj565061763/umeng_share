@@ -1,0 +1,22 @@
+<resources>
+
+    <!-- appid -->
+    <string name="lib_umeng_share_qq_app_id"></string>
+    <!-- appkey -->
+    <string name="lib_umeng_share_qq_app_key"></string>
+    <!-- scheme -->
+    <string name="lib_umeng_share_qq_scheme"></string>
+
+
+    <!-- appid -->
+    <string name="lib_umeng_share_wechat_app_id"></string>
+    <!-- appsecret -->
+    <string name="lib_umeng_share_wechat_app_secret"></string>
+
+
+    <!-- appkey -->
+    <string name="lib_umeng_share_sina_app_key"></string>
+    <!-- appsecret -->
+    <string name="lib_umeng_share_sina_app_secret"></string>
+
+</resources>
