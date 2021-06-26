@@ -1,11 +1,9 @@
 package com.sd.demo.umeng_share.activity
 
-import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.Toast
-import androidx.appcompat.app.AppCompatActivity
 import com.sd.demo.umeng_share.databinding.ActivityMainBinding
 import com.sd.lib.umeng_share.LibUmengShare
 import com.umeng.commonsdk.UMConfigure
@@ -15,7 +13,7 @@ import com.umeng.socialize.UMShareConfig
 import com.umeng.socialize.bean.SHARE_MEDIA
 
 
-class MainActivity : AppCompatActivity(), View.OnClickListener {
+class MainActivity : BaseActivity(), View.OnClickListener {
     private val TAG = MainActivity::class.java.simpleName
     private lateinit var _binding: ActivityMainBinding
 
@@ -52,7 +50,6 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
      * QQ登录
      */
     private fun loginQQ() {
-        val shareAPI = UMShareAPI.get(this)
         val isInstall = shareAPI.isInstall(this, SHARE_MEDIA.QQ)
         if (!isInstall) {
             Toast.makeText(this, "QQ未安装", Toast.LENGTH_SHORT).show()
@@ -66,7 +63,6 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
      * 微信登录
      */
     private fun loginWechat() {
-        val shareAPI = UMShareAPI.get(this)
         val isInstall = shareAPI.isInstall(this, SHARE_MEDIA.WEIXIN)
         if (!isInstall) {
             Toast.makeText(this, "微信未安装", Toast.LENGTH_SHORT).show()
@@ -95,21 +91,5 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         override fun onCancel(platform: SHARE_MEDIA, action: Int) {
             Log.i(TAG, "onCancel ${platform}")
         }
-    }
-
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        super.onActivityResult(requestCode, resultCode, data)
-        Log.i(TAG, "onActivityResult requestCode:${requestCode} resultCode:${resultCode}")
-        UMShareAPI.get(this).onActivityResult(requestCode, resultCode, data)
-    }
-
-    override fun onSaveInstanceState(outState: Bundle) {
-        super.onSaveInstanceState(outState)
-        UMShareAPI.get(this).onSaveInstanceState(outState)
-    }
-
-    override fun onDestroy() {
-        super.onDestroy()
-        UMShareAPI.get(this).release()
     }
 }
