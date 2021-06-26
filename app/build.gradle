@@ -28,6 +28,14 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+
+    flavorDimensions "default"
+    productFlavors{
+        demo {
+            applicationId "com.umeng.soexample"
+            dimension "default"
+        }
+    }
 }
 
 dependencies {
