@@ -30,6 +30,9 @@ android {
 }
 
 dependencies {
+    api fileTree(dir: 'libs', include: ['*.aar'])
+    api fileTree(dir: 'libs', include: ['*.jar'])
+
     implementation 'androidx.appcompat:appcompat:1.2.0'
 
     //必选
@@ -41,19 +44,6 @@ dependencies {
     implementation 'com.umeng.umsdk:share-core:7.1.5'
     //分享面板功能，可选
     implementation 'com.umeng.umsdk:share-board:7.1.5'
-
-    //微信完整版
-    implementation 'com.umeng.umsdk:share-wx:7.1.5'
-    //微信官方依赖库，必选
-    implementation 'com.tencent.mm.opensdk:wechat-sdk-android-without-mta:6.7.0'
-
-    //QQ完整版
-    implementation 'com.umeng.umsdk:share-qq:7.1.5'
-    //QQ官方依赖库，必选
-    implementation 'com.tencent.tauth:qqopensdk:3.53.0'
-
-    //新浪微博完整版
-    implementation 'com.umeng.umsdk:share-sina:7.1.5'
 }
 
 task generateSourcesJar(type: Jar) {
