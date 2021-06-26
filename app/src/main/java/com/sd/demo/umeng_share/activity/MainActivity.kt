@@ -7,7 +7,9 @@ import androidx.appcompat.app.AppCompatActivity
 import com.sd.demo.umeng_share.databinding.ActivityMainBinding
 import com.sd.lib.umeng_share.LibUmengShare
 import com.umeng.commonsdk.UMConfigure
+import com.umeng.socialize.UMAuthListener
 import com.umeng.socialize.UMShareAPI
+import com.umeng.socialize.bean.SHARE_MEDIA
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
     private lateinit var _binding: ActivityMainBinding
@@ -43,6 +45,23 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             _binding.btnLoginSina -> {
 
             }
+        }
+    }
+
+    /**
+     * 授权监听
+     */
+    private val _umAuthListener = object : UMAuthListener {
+        override fun onStart(platform: SHARE_MEDIA) {
+        }
+
+        override fun onComplete(platform: SHARE_MEDIA, action: Int, data: MutableMap<String, String>) {
+        }
+
+        override fun onError(platform: SHARE_MEDIA, action: Int, throwable: Throwable) {
+        }
+
+        override fun onCancel(platform: SHARE_MEDIA, action: Int) {
         }
     }
 }
