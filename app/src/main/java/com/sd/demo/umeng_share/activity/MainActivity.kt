@@ -40,9 +40,7 @@ class MainActivity : BaseActivity(), View.OnClickListener {
         when (v) {
             _binding.btnLoginQq -> loginQQ()
             _binding.btnLoginWechat -> loginWechat()
-            _binding.btnLoginSina -> {
-
-            }
+            _binding.btnLoginSina -> loginSina()
         }
     }
 
@@ -70,6 +68,20 @@ class MainActivity : BaseActivity(), View.OnClickListener {
         }
 
         shareAPI.getPlatformInfo(this, SHARE_MEDIA.WEIXIN, _umAuthListener)
+    }
+
+    /**
+     * 新浪登录
+     */
+    private fun loginSina() {
+        val isInstall = shareAPI.isInstall(this, SHARE_MEDIA.SINA)
+        if (!isInstall) {
+            Toast.makeText(this, "新浪微博未安装", Toast.LENGTH_SHORT).show()
+            return
+        }
+
+        shareAPI.deleteOauth(this, SHARE_MEDIA.SINA, null)
+        shareAPI.getPlatformInfo(this, SHARE_MEDIA.SINA, _umAuthListener)
     }
 
     /**
