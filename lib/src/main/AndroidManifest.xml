@@ -45,13 +45,6 @@
             android:theme="@android:style/Theme.Translucent.NoTitleBar"
             tools:replace="android:configChanges" />
 
-        <!-- 微信 -->
-        <activity
-            android:name="${applicationId}.wxapi.WXEntryActivity"
-            android:configChanges="keyboardHidden|orientation|screenSize"
-            android:exported="true"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-
     </application>
 
 </manifest>
