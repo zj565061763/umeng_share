@@ -47,6 +47,7 @@ android {
     productFlavors{
         demo {
             applicationId "com.umeng.soexample"
+            manifestPlaceholders=[qqappid: "101830139"]
             dimension "default"
         }
     }

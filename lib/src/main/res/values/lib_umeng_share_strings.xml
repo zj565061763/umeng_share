@@ -4,8 +4,6 @@
     <string name="lib_umeng_share_qq_app_id"></string>
     <!-- （QQ）appkey -->
     <string name="lib_umeng_share_qq_app_key"></string>
-    <!-- （QQ）scheme -->
-    <string name="lib_umeng_share_qq_scheme"></string>
 
 
     <!-- （微信）appid -->

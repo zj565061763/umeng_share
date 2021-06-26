@@ -5,8 +5,6 @@
     <string name="lib_umeng_share_qq_app_id">101830139</string>
     <!-- （QQ）appkey -->
     <string name="lib_umeng_share_qq_app_key">5d63ae8858f1caab67715ccd6c18d7a5</string>
-    <!-- （QQ）scheme -->
-    <string name="lib_umeng_share_qq_scheme">tencent101830139</string>
 
 
     <!-- （微信）appid -->
