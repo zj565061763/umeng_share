@@ -9,6 +9,6 @@ public class LibUmengShareFileProvider extends FileProvider
     public static String getAuthority(Context context)
     {
         final String packageName = context.getPackageName();
-        return packageName + LibUmengShareFileProvider.class.getSimpleName();
+        return packageName + "." + LibUmengShareFileProvider.class.getSimpleName();
     }
 }
