@@ -35,6 +35,7 @@ class MainActivity : BaseActivity(), View.OnClickListener {
     override fun onClick(v: View?) {
         when (v) {
             _binding.btnLogin -> startActivity(Intent(this, LoginActivity::class.java))
+            _binding.btnShare -> startActivity(Intent(this, ShareActivity::class.java))
         }
     }
 }
