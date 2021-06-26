@@ -102,4 +102,14 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         Log.i(TAG, "onActivityResult requestCode:${requestCode} resultCode:${resultCode}")
         UMShareAPI.get(this).onActivityResult(requestCode, resultCode, data)
     }
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        UMShareAPI.get(this).onSaveInstanceState(outState)
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        UMShareAPI.get(this).release()
+    }
 }
