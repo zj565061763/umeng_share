@@ -5,7 +5,7 @@ plugins {
 
 def libGroupId = "com.sd.lib.umeng"
 def libArtifactId = "umeng_share"
-def libVersionCode = 20210626
+def libVersionCode = 20210630
 def libVersionName = "7.1.5-v1"
 
 android {
