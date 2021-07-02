@@ -36,7 +36,7 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.2.0'
 
     //友盟公共库，必选
-    api 'com.github.zj565061763:umeng_common:9.4.0-v01'
+    api 'com.github.zj565061763:umeng_common:9.4.0-v02'
 
     //分享核心库，必选
     api 'com.umeng.umsdk:share-core:7.1.5'
