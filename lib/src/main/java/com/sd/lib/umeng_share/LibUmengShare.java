@@ -4,12 +4,18 @@ import android.content.Context;
 
 import com.sd.lib.umeng_share.provider.LibUmengShareFileProvider;
 import com.umeng.socialize.PlatformConfig;
+import com.umeng.socialize.UMShareAPI;
+import com.umeng.socialize.UMShareConfig;
 
 public class LibUmengShare {
     private LibUmengShare() {
     }
 
     public static void init(Context context) {
+        final UMShareConfig config = new UMShareConfig();
+        config.isNeedAuthOnGetUserInfo(true);
+        UMShareAPI.get(context).setShareConfig(config);
+
         final String authority = LibUmengShareFileProvider.getAuthority(context);
         PlatformConfig.setQQZone(
                 context.getString(R.string.lib_umeng_share_qq_app_id),

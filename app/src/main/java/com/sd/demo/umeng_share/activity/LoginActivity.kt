@@ -5,11 +5,7 @@ import android.util.Log
 import android.view.View
 import android.widget.Toast
 import com.sd.demo.umeng_share.databinding.ActivityLoginBinding
-import com.sd.lib.umeng_share.LibUmengShare
-import com.umeng.commonsdk.UMConfigure
 import com.umeng.socialize.UMAuthListener
-import com.umeng.socialize.UMShareAPI
-import com.umeng.socialize.UMShareConfig
 import com.umeng.socialize.bean.SHARE_MEDIA
 
 class LoginActivity : BaseActivity(), View.OnClickListener {
@@ -20,19 +16,6 @@ class LoginActivity : BaseActivity(), View.OnClickListener {
         super.onCreate(savedInstanceState)
         _binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(_binding.root)
-        initUmengSDK()
-    }
-
-    private fun initUmengSDK() {
-        UMConfigure.init(this, "59892f08310c9307b60023d0", "Umeng",
-                UMConfigure.DEVICE_TYPE_PHONE,
-                "669c30a9584623e70e8cd01b0381dcb4")
-
-        val config = UMShareConfig()
-        config.isNeedAuthOnGetUserInfo(true)
-        UMShareAPI.get(this).setShareConfig(config)
-
-        LibUmengShare.init(this)
     }
 
     override fun onClick(v: View?) {
