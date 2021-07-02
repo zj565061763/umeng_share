@@ -7,6 +7,7 @@ import com.umeng.commonsdk.UMConfigure
 class App : Application() {
     override fun onCreate() {
         super.onCreate()
+        UMConfigure.setLogEnabled(true)
         LibUmengCommon.preInit(this)
     }
 }
