@@ -6,14 +6,11 @@ import com.sd.lib.umeng_share.provider.LibUmengShareFileProvider;
 import com.umeng.analytics.MobclickAgent;
 import com.umeng.socialize.PlatformConfig;
 
-public class LibUmengShare
-{
-    private LibUmengShare()
-    {
+public class LibUmengShare {
+    private LibUmengShare() {
     }
 
-    public static void init(Context context)
-    {
+    public static void init(Context context) {
         MobclickAgent.setPageCollectionMode(MobclickAgent.PageMode.AUTO);
 
         final String authority = LibUmengShareFileProvider.getAuthority(context);
