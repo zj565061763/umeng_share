@@ -6,6 +6,7 @@ import android.view.View
 import com.sd.demo.umeng_share.databinding.ActivityMainBinding
 import com.sd.lib.umeng_common.LibUmengCommon
 import com.sd.lib.umeng_share.LibUmengShare
+import com.tencent.tauth.Tencent
 
 
 class MainActivity : BaseActivity(), View.OnClickListener {
@@ -21,6 +22,9 @@ class MainActivity : BaseActivity(), View.OnClickListener {
     private fun initUmengSDK() {
         LibUmengCommon.init(this, "669c30a9584623e70e8cd01b0381dcb4")
         LibUmengShare.init(this)
+
+        // 错误码:2002 错误信息:授权失败
+        Tencent.setIsPermissionGranted(true)
     }
 
     override fun onClick(v: View?) {
