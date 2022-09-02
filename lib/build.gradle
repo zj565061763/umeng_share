@@ -9,9 +9,9 @@ def libVersionCode = 20210702
 def libVersionName = "7.1.5-v02"
 
 android {
-    compileSdkVersion 30
+    compileSdkVersion 32
     defaultConfig {
-        minSdkVersion 16
+        minSdkVersion 19
         targetSdkVersion 30
         versionCode libVersionCode
         versionName libVersionName
@@ -30,32 +30,20 @@ android {
 }
 
 dependencies {
-    api fileTree(dir: 'libs', include: ['*.aar'])
-    api fileTree(dir: 'libs', include: ['*.jar'])
-
     implementation 'androidx.appcompat:appcompat:1.2.0'
 
-    //友盟公共库，必选
-    api 'com.github.zj565061763:umeng_common:9.4.0-v02'
+    api 'com.github.zj565061763:umeng_common:9.5.2-v01' //友盟公共库，必选
 
-    //分享核心库，必选
-    api 'com.umeng.umsdk:share-core:7.1.5'
-    //分享面板功能，可选
-    api 'com.umeng.umsdk:share-board:7.1.5'
+    api 'com.umeng.umsdk:share-core:7.2.0' //分享核心库，必选
+    api 'com.umeng.umsdk:share-board:7.2.0' //分享面板功能，可选
 
-    //微信完整版
-    api 'com.umeng.umsdk:share-wx:7.1.5'
-    //微信官方依赖库，必选
-    api 'com.tencent.mm.opensdk:wechat-sdk-android-without-mta:6.7.0'
+    api 'com.umeng.umsdk:share-wx:7.2.0' //微信完整版
+    api 'com.tencent.mm.opensdk:wechat-sdk-android-without-mta:6.8.0' //微信官方依赖库，必选
 
-    //QQ完整版
-    api 'com.umeng.umsdk:share-qq:7.1.5'
-    //QQ官方依赖库，必选
-    api 'com.tencent.tauth:qqopensdk:3.53.0'
-    implementation 'com.squareup.okhttp3:okhttp:3.12.12'
+    api 'com.umeng.umsdk:share-qq:7.2.0' //QQ完整版
 
-    //新浪微博完整版
-    api 'com.umeng.umsdk:share-sina:7.1.5'
+    implementation 'com.umeng.umsdk:share-sina:7.2.0' //新浪微博完整版
+    implementation 'io.github.sinaweibosdk:core:11.11.1@aar' //新浪微博官方SDK依赖库，必选
 }
 
 task generateSourcesJar(type: Jar) {

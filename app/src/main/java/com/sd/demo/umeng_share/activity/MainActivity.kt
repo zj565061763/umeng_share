@@ -19,7 +19,7 @@ class MainActivity : BaseActivity(), View.OnClickListener {
     }
 
     private fun initUmengSDK() {
-        LibUmengCommon.init(this)
+        LibUmengCommon.init(this, "669c30a9584623e70e8cd01b0381dcb4")
         LibUmengShare.init(this)
     }
 

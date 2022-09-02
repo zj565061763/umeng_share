@@ -8,6 +8,6 @@ class App : Application() {
     override fun onCreate() {
         super.onCreate()
         UMConfigure.setLogEnabled(true)
-        LibUmengCommon.preInit(this)
+        LibUmengCommon.preInit(this, "59892f08310c9307b60023d0")
     }
 }
