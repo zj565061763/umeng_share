@@ -5,16 +5,13 @@ plugins {
 
 def libGroupId = "com.sd.lib.umeng"
 def libArtifactId = "umeng_share"
-def libVersionCode = 20210702
 def libVersionName = "7.2.0-v01"
 
 android {
-    compileSdkVersion 32
+    compileSdk 32
     defaultConfig {
-        minSdkVersion 19
-        targetSdkVersion 30
-        versionCode libVersionCode
-        versionName libVersionName
+        minSdk 21
+        targetSdk 30
     }
 
     buildTypes {
@@ -32,7 +29,7 @@ android {
 dependencies {
     implementation 'androidx.appcompat:appcompat:1.2.0'
 
-    api 'com.github.zj565061763:umeng_common:9.5.2-v01' //友盟公共库，必选
+    api 'com.github.zj565061763:umeng_common:9.5.2-v02' //友盟公共库，必选
 
     api 'com.umeng.umsdk:share-core:7.2.0' //分享核心库，必选
     api 'com.umeng.umsdk:share-board:7.2.0' //分享面板功能，可选

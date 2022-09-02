@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    compileSdkVersion 32
+    compileSdk 32
     defaultConfig {
+        minSdk 21
+        targetSdk 30
         applicationId "com.sd.demo.umeng_share"
-        minSdkVersion 19
-        targetSdkVersion 30
         versionCode 1
         versionName "1.0"
 
