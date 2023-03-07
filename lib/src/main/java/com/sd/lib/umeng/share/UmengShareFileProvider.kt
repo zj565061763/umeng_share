@@ -1,12 +1,13 @@
-package com.sd.lib.umeng.share;
+package com.sd.lib.umeng.share
 
-import android.content.Context;
+import android.content.Context
+import androidx.core.content.FileProvider
 
-import androidx.core.content.FileProvider;
-
-public class LibUmengShareFileProvider extends FileProvider {
-    public static String getAuthority(Context context) {
-        final String packageName = context.getPackageName();
-        return packageName + "." + LibUmengShareFileProvider.class.getSimpleName();
+internal class UmengShareFileProvider : FileProvider() {
+    companion object {
+        @JvmStatic
+        fun getAuthority(context: Context): String {
+            return "${context.packageName}.f-fp-lib-umeng-share"
+        }
     }
 }

@@ -15,8 +15,8 @@
 
     <application>
         <provider
-            android:name="com.sd.lib.umeng.share.LibUmengShareFileProvider"
-            android:authorities="${applicationId}.LibUmengShareFileProvider"
+            android:name="com.sd.lib.umeng.share.UmengShareFileProvider"
+            android:authorities="${applicationId}.f-fp-lib-umeng-share"
             android:exported="false"
             android:grantUriPermissions="true">
             <meta-data

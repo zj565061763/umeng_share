@@ -15,7 +15,7 @@ public class LibUmengShare {
         config.isNeedAuthOnGetUserInfo(true);
         UMShareAPI.get(context).setShareConfig(config);
 
-        final String authority = LibUmengShareFileProvider.getAuthority(context);
+        final String authority = UmengShareFileProvider.getAuthority(context);
         PlatformConfig.setFileProvider(authority);
 
         PlatformConfig.setQQZone(
