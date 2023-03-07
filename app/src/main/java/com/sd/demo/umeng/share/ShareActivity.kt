@@ -3,7 +3,7 @@ package com.sd.demo.umeng.share
 import android.os.Bundle
 import android.util.Log
 import android.view.View
-import com.sd.demo.umeng.databinding.ActivityShareBinding
+import com.sd.demo.umeng.share.databinding.ActivityShareBinding
 import com.umeng.socialize.ShareAction
 import com.umeng.socialize.UMShareListener
 import com.umeng.socialize.bean.SHARE_MEDIA

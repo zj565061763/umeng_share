@@ -4,7 +4,7 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.Toast
-import com.sd.demo.umeng.databinding.ActivityLoginBinding
+import com.sd.demo.umeng.share.databinding.ActivityLoginBinding
 import com.umeng.socialize.UMAuthListener
 import com.umeng.socialize.bean.SHARE_MEDIA
 
