@@ -1,4 +1,4 @@
-package com.sd.demo.umeng_share.activity
+package com.sd.demo.umeng_share
 
 import android.content.Intent
 import android.os.Bundle

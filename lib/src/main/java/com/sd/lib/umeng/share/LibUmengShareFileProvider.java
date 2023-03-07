@@ -1,4 +1,4 @@
-package com.sd.lib.umeng_share.provider;
+package com.sd.lib.umeng.share;
 
 import android.content.Context;
 

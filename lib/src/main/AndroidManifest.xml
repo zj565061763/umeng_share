@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.sd.lib.umeng_share">
+    package="com.sd.lib.umeng">
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
@@ -15,7 +15,7 @@
 
     <application>
         <provider
-            android:name=".provider.LibUmengShareFileProvider"
+            android:name="com.sd.lib.umeng.share.LibUmengShareFileProvider"
             android:authorities="${applicationId}.LibUmengShareFileProvider"
             android:exported="false"
             android:grantUriPermissions="true">

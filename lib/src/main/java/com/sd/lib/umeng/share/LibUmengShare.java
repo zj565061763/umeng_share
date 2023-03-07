@@ -1,8 +1,8 @@
-package com.sd.lib.umeng_share;
+package com.sd.lib.umeng.share;
 
 import android.content.Context;
 
-import com.sd.lib.umeng_share.provider.LibUmengShareFileProvider;
+import com.sd.lib.umeng_share.R;
 import com.umeng.socialize.PlatformConfig;
 import com.umeng.socialize.UMShareAPI;
 import com.umeng.socialize.UMShareConfig;

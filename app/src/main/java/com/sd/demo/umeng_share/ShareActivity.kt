@@ -1,4 +1,4 @@
-package com.sd.demo.umeng_share.activity
+package com.sd.demo.umeng_share
 
 import android.os.Bundle
 import android.util.Log
