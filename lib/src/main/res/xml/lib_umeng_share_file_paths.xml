@@ -7,6 +7,7 @@
     <root-path
         name="opensdk_root"
         path="" />
+
     <external-files-path
         name="opensdk_external"
         path="Images/tmp" />

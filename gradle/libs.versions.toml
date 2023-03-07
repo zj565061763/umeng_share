@@ -25,6 +25,7 @@ umsdk-shareWx = { module = "com.umeng.umsdk:share-wx", version.ref = "umengShare
 umsdk-shareQq = { module = "com.umeng.umsdk:share-qq", version.ref = "umengShare" }
 umsdk-shareSina = { module = "com.umeng.umsdk:share-sina", version.ref = "umengShare" }
 tencent-wechat = "com.tencent.mm.opensdk:wechat-sdk-android-without-mta:6.8.0"
+sina-weibo = "io.github.sinaweibosdk:core:12.5.0@aar"
 
 [plugins]
 

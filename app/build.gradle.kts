@@ -55,9 +55,6 @@ android {
 }
 
 dependencies {
-    implementation(fileTree("dir" to "libs", "include" to listOf("*.aar")))
-    implementation(fileTree("dir" to "libs", "include" to listOf("*.jar")))
-
     implementation(libs.androidx.appcompat)
     implementation(project(":lib"))
 }

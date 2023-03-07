@@ -12,7 +12,6 @@ dependencyResolutionManagement {
         google()
         mavenCentral()
         maven("https://jitpack.io")
-        maven("https://repo1.maven.org/maven2/")
     }
 }
 

@@ -1,9 +1,9 @@
-package com.sd.demo.umeng_share
+package com.sd.demo.umeng.share
 
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
-import com.sd.demo.umeng_share.databinding.ActivityMainBinding
+import com.sd.demo.umeng.databinding.ActivityMainBinding
 import com.sd.lib.umeng_common.LibUmengCommon
 import com.sd.lib.umeng.share.LibUmengShare
 import com.tencent.tauth.Tencent

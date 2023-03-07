@@ -32,6 +32,7 @@ android {
 }
 
 dependencies {
+    api(fileTree("dir" to "libs", "include" to listOf("*.jar")))
     implementation(libs.androidx.core)
 
     api(libs.sd.umengCommon)
@@ -44,6 +45,7 @@ dependencies {
 
     api(libs.umsdk.shareQq)
     api(libs.umsdk.shareSina)
+    api(libs.sina.weibo)
 }
 
 afterEvaluate {
