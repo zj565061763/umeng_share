@@ -23,10 +23,10 @@ class ShareActivity : BaseActivity(), View.OnClickListener {
 
     override fun onClick(v: View?) {
         when (v) {
-            _binding.btnShareQq -> shareQQ()
-            _binding.btnShareQzone -> shareQzone()
             _binding.btnShareWechat -> shareWechat()
             _binding.btnShareWechatMoments -> shareWechatMoments()
+            _binding.btnShareQq -> shareQQ()
+            _binding.btnShareQzone -> shareQzone()
             _binding.btnShareSina -> shareSina()
         }
     }
@@ -43,18 +43,6 @@ class ShareActivity : BaseActivity(), View.OnClickListener {
         }
     }
 
-    private fun shareQQ() {
-        shareAction().apply {
-            this.platform = SHARE_MEDIA.QQ
-        }.share()
-    }
-
-    private fun shareQzone() {
-        shareAction().apply {
-            this.platform = SHARE_MEDIA.QZONE
-        }.share()
-    }
-
     private fun shareWechat() {
         shareAction().apply {
             this.platform = SHARE_MEDIA.WEIXIN
@@ -64,6 +52,18 @@ class ShareActivity : BaseActivity(), View.OnClickListener {
     private fun shareWechatMoments() {
         shareAction().apply {
             this.platform = SHARE_MEDIA.WEIXIN_CIRCLE
+        }.share()
+    }
+
+    private fun shareQQ() {
+        shareAction().apply {
+            this.platform = SHARE_MEDIA.QQ
+        }.share()
+    }
+
+    private fun shareQzone() {
+        shareAction().apply {
+            this.platform = SHARE_MEDIA.QZONE
         }.share()
     }
 

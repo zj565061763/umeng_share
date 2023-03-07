@@ -17,23 +17,10 @@ class LoginActivity : BaseActivity(), View.OnClickListener {
 
     override fun onClick(v: View?) {
         when (v) {
-            _binding.btnLoginQq -> loginQQ()
             _binding.btnLoginWechat -> loginWechat()
+            _binding.btnLoginQq -> loginQQ()
             _binding.btnLoginSina -> loginSina()
         }
-    }
-
-    /**
-     * QQ登录
-     */
-    private fun loginQQ() {
-        val isInstall = shareAPI.isInstall(this, SHARE_MEDIA.QQ)
-        if (!isInstall) {
-            Toast.makeText(this, "QQ未安装", Toast.LENGTH_SHORT).show()
-            return
-        }
-
-        shareAPI.getPlatformInfo(this, SHARE_MEDIA.QQ, _umAuthListener)
     }
 
     /**
@@ -47,6 +34,19 @@ class LoginActivity : BaseActivity(), View.OnClickListener {
         }
 
         shareAPI.getPlatformInfo(this, SHARE_MEDIA.WEIXIN, _umAuthListener)
+    }
+
+    /**
+     * QQ登录
+     */
+    private fun loginQQ() {
+        val isInstall = shareAPI.isInstall(this, SHARE_MEDIA.QQ)
+        if (!isInstall) {
+            Toast.makeText(this, "QQ未安装", Toast.LENGTH_SHORT).show()
+            return
+        }
+
+        shareAPI.getPlatformInfo(this, SHARE_MEDIA.QQ, _umAuthListener)
     }
 
     /**
