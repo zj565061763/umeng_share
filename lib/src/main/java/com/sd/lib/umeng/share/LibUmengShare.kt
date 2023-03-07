@@ -1,34 +1,33 @@
-package com.sd.lib.umeng.share;
+package com.sd.lib.umeng.share
 
-import android.content.Context;
+import android.content.Context
+import com.umeng.socialize.PlatformConfig
+import com.umeng.socialize.UMShareAPI
+import com.umeng.socialize.UMShareConfig
 
-import com.umeng.socialize.PlatformConfig;
-import com.umeng.socialize.UMShareAPI;
-import com.umeng.socialize.UMShareConfig;
+object LibUmengShare {
+    @JvmOverloads
+    @JvmStatic
+    fun init(
+        context: Context,
+        wechatAppId: String = "",
+        wechatAppSecret: String = "",
+        qqAppId: String = "",
+        qqAppKey: String = "",
+        sinaAppKey: String = "",
+        sinaAppSecret: String = "",
+    ) {
+        UMShareAPI.get(context).setShareConfig(
+            UMShareConfig().apply {
+                this.isNeedAuthOnGetUserInfo(true)
+            }
+        )
 
-public class LibUmengShare {
-    private LibUmengShare() {
-    }
+        val authority = UmengShareFileProvider.getAuthority(context)
+        PlatformConfig.setFileProvider(authority)
 
-    public static void init(Context context) {
-        final UMShareConfig config = new UMShareConfig();
-        config.isNeedAuthOnGetUserInfo(true);
-        UMShareAPI.get(context).setShareConfig(config);
-
-        final String authority = UmengShareFileProvider.getAuthority(context);
-        PlatformConfig.setFileProvider(authority);
-
-        PlatformConfig.setQQZone(
-                context.getString(R.string.lib_umeng_share_qq_app_id),
-                context.getString(R.string.lib_umeng_share_qq_app_key));
-
-        PlatformConfig.setWeixin(
-                context.getString(R.string.lib_umeng_share_wechat_app_id),
-                context.getString(R.string.lib_umeng_share_wechat_app_secret));
-
-        PlatformConfig.setSinaWeibo(
-                context.getString(R.string.lib_umeng_share_sina_app_key),
-                context.getString(R.string.lib_umeng_share_sina_app_secret),
-                "http://sns.whalecloud.com");
+        PlatformConfig.setWeixin(wechatAppId, wechatAppSecret)
+        PlatformConfig.setQQZone(qqAppId, qqAppKey)
+        PlatformConfig.setSinaWeibo(sinaAppKey, sinaAppSecret, "http://sns.whalecloud.com")
     }
 }

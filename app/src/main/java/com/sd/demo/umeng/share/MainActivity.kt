@@ -17,7 +17,15 @@ class MainActivity : BaseActivity(), View.OnClickListener {
         setContentView(_binding.root)
 
         LibUmengCommon.init()
-        LibUmengShare.init(this)
+        LibUmengShare.init(
+            context = this,
+            wechatAppId = getString(R.string.wechat_app_id),
+            wechatAppSecret = getString(R.string.wechat_app_secret),
+            qqAppId = getString(R.string.qq_app_id),
+            qqAppKey = getString(R.string.qq_app_key),
+            sinaAppKey = getString(R.string.sina_app_key),
+            sinaAppSecret = getString(R.string.sina_app_secret),
+        )
 
         // 错误码:2002 错误信息:授权失败
         Tencent.setIsPermissionGranted(true)
