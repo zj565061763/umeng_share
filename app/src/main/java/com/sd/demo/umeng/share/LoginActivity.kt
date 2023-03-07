@@ -1,7 +1,6 @@
 package com.sd.demo.umeng.share
 
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import android.widget.Toast
 import com.sd.demo.umeng.share.databinding.ActivityLoginBinding
@@ -9,12 +8,10 @@ import com.umeng.socialize.UMAuthListener
 import com.umeng.socialize.bean.SHARE_MEDIA
 
 class LoginActivity : BaseActivity(), View.OnClickListener {
-    private val TAG = LoginActivity::class.java.simpleName
-    private lateinit var _binding: ActivityLoginBinding
+    private val _binding by lazy { ActivityLoginBinding.inflate(layoutInflater) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        _binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(_binding.root)
     }
 
@@ -71,19 +68,19 @@ class LoginActivity : BaseActivity(), View.OnClickListener {
      */
     private val _umAuthListener = object : UMAuthListener {
         override fun onStart(platform: SHARE_MEDIA) {
-            Log.i(TAG, "onStart ${platform}")
+            logMsg { "login onStart $platform" }
         }
 
         override fun onComplete(platform: SHARE_MEDIA, action: Int, data: MutableMap<String, String>) {
-            Log.i(TAG, "onComplete ${platform} data:${data}")
+            logMsg { "login onComplete $platform data:${data}" }
         }
 
         override fun onError(platform: SHARE_MEDIA, action: Int, throwable: Throwable) {
-            Log.e(TAG, "onError ${platform} throwable:${throwable}")
+            logMsg { "login onError $platform throwable:${throwable}" }
         }
 
         override fun onCancel(platform: SHARE_MEDIA, action: Int) {
-            Log.i(TAG, "onCancel ${platform}")
+            logMsg { "login onCancel $platform" }
         }
     }
 }

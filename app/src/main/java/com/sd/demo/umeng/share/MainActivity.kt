@@ -2,6 +2,7 @@ package com.sd.demo.umeng.share
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import com.sd.demo.umeng.share.databinding.ActivityMainBinding
 import com.sd.lib.umeng.common.LibUmengCommon
@@ -37,4 +38,8 @@ class MainActivity : BaseActivity(), View.OnClickListener {
             _binding.btnShare -> startActivity(Intent(this, ShareActivity::class.java))
         }
     }
+}
+
+inline fun logMsg(block: () -> String) {
+    Log.i("umeng-share-demo", block())
 }

@@ -1,7 +1,6 @@
 package com.sd.demo.umeng.share
 
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import com.sd.demo.umeng.share.databinding.ActivityShareBinding
 import com.umeng.socialize.ShareAction
@@ -14,14 +13,11 @@ import com.umeng.socialize.media.UMWeb
  * 分享
  */
 class ShareActivity : BaseActivity(), View.OnClickListener {
-    private val TAG = ShareActivity::class.java.simpleName
     private val IMAGE_URL = "https://thirdwx.qlogo.cn/mmopen/vi_32/DYAIOgq83epGX5k008stLSSLCX1niaVCeQKTA2suMIRSFQeqOUAY14C6o8GkUb4Uc9DxoRoE8KlSM2QSLRlZP8A/132"
-
-    private lateinit var _binding: ActivityShareBinding
+    private val _binding by lazy { ActivityShareBinding.inflate(layoutInflater) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        _binding = ActivityShareBinding.inflate(layoutInflater)
         setContentView(_binding.root)
     }
 
@@ -79,19 +75,19 @@ class ShareActivity : BaseActivity(), View.OnClickListener {
 
     private val _umShareListener = object : UMShareListener {
         override fun onStart(platform: SHARE_MEDIA) {
-            Log.i(TAG, "onStart ${platform}")
+            logMsg { "share onStart $platform" }
         }
 
         override fun onResult(platform: SHARE_MEDIA) {
-            Log.i(TAG, "onResult ${platform}")
+            logMsg { "share onResult $platform" }
         }
 
         override fun onError(platform: SHARE_MEDIA, throwable: Throwable) {
-            Log.e(TAG, "onError ${platform} throwable:${throwable}")
+            logMsg { "share onError $platform throwable:${throwable}" }
         }
 
         override fun onCancel(platform: SHARE_MEDIA) {
-            Log.i(TAG, "onCancel ${platform}")
+            logMsg { "share onCancel $platform" }
         }
     }
 }
