@@ -1,6 +1,7 @@
 package com.sd.lib.umeng.share
 
 import android.content.Context
+import androidx.core.content.FileProvider
 import com.umeng.socialize.PlatformConfig
 import com.umeng.socialize.UMShareAPI
 import com.umeng.socialize.UMShareConfig
@@ -23,7 +24,7 @@ object LibUmengShare {
             }
         )
 
-        val authority = UmengShareFileProvider.getAuthority(context)
+        val authority = "${context.packageName}.f-fp-lib-umeng-share"
         PlatformConfig.setFileProvider(authority)
 
         PlatformConfig.setWeixin(wechatAppId, wechatAppSecret)
@@ -31,3 +32,5 @@ object LibUmengShare {
         PlatformConfig.setSinaWeibo(sinaAppKey, sinaAppSecret, "http://sns.whalecloud.com")
     }
 }
+
+internal class UmengShareFileProvider : FileProvider()
