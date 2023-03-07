@@ -51,7 +51,7 @@ android {
         create("demo") {
             applicationId = "com.umeng.soexample"
             manifestPlaceholders.apply {
-                put("qqappid", "11111111111111111111")
+                put("qqappid", "101830139")
             }
             dimension = "default"
         }
