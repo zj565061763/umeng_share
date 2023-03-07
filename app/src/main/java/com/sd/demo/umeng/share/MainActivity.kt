@@ -10,16 +10,12 @@ import com.tencent.tauth.Tencent
 
 
 class MainActivity : BaseActivity(), View.OnClickListener {
-    private lateinit var _binding: ActivityMainBinding
+    private val _binding by lazy { ActivityMainBinding.inflate(layoutInflater) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        _binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(_binding.root)
-        initUmengSDK()
-    }
 
-    private fun initUmengSDK() {
         LibUmengCommon.init()
         LibUmengShare.init(this)
 

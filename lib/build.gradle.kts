@@ -43,7 +43,7 @@ dependencies {
 
     api(libs.umsdk.shareQq)
     api(libs.umsdk.shareSina)
-    api(libs.sina.weibo)
+    api("io.github.sinaweibosdk:core:12.5.0@aar")
 }
 
 afterEvaluate {
