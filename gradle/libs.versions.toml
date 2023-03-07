@@ -18,14 +18,14 @@ junit = "junit:junit:4.13.2"
 androidx-test-ext-junit = "androidx.test.ext:junit:1.1.5"
 androidx-test-espresso-core = "androidx.test.espresso:espresso-core:3.5.1"
 
-sd-umengCommon = "com.github.zj565061763:umeng_common:9.5.6-v02"
+sd-umengCommon = "com.github.zj565061763:umeng_common:9.5.6-v03"
 umsdk-shareCore = { module = "com.umeng.umsdk:share-core", version.ref = "umengShare" }
 umsdk-shareBoard = { module = "com.umeng.umsdk:share-board", version.ref = "umengShare" }
 umsdk-shareWx = { module = "com.umeng.umsdk:share-wx", version.ref = "umengShare" }
 umsdk-shareQq = { module = "com.umeng.umsdk:share-qq", version.ref = "umengShare" }
 umsdk-shareSina = { module = "com.umeng.umsdk:share-sina", version.ref = "umengShare" }
 tencent-wechat = "com.tencent.mm.opensdk:wechat-sdk-android-without-mta:6.8.0"
-sina-weibo = "io.github.sinaweibosdk:core:12.5.0@aar"
+sina-weibo = "io.github.sinaweibosdk:core:12.5.0"
 
 [plugins]
 

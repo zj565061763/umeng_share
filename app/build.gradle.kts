@@ -57,4 +57,5 @@ android {
 dependencies {
     implementation(libs.androidx.appcompat)
     implementation(project(":lib"))
+    implementation(libs.sd.umengCommon)
 }
